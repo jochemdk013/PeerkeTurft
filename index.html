@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="https://jochemdk013.github.io/PeerkeTurft/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>PeerkeTurft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="JohnnyTurft">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <link rel="preload" href="/JohnnyTurft/images/tally-0.png" as="image">
+    <link rel="preload" href="/JohnnyTurft/images/tally-1.png" as="image">
+    <link rel="preload" href="/JohnnyTurft/images/tally-2.png" as="image">
+    <link rel="preload" href="/JohnnyTurft/images/tally-3.png" as="image">
+    <link rel="preload" href="/JohnnyTurft/images/tally-4.png" as="image">
+    <link rel="preload" href="/JohnnyTurft/images/tally-5.png" as="image">
+</head>
+<body>
+    <header>
+        <img src="images/header-image.png" alt="Header Image" style="width: 100%;">
+    </header>
+    <div id="tallyGroups"></div>
+    <button id="addTally"><img src="icons/add-icon.png" alt="Voeg toe"></button>
+
+    <button id="moreButton" class="more-button">
+      <img src="icons/more-icon.png" alt="Meer opties">
+    </button>
+
+    <div id="moreOptions" class="more-options hidden">
+      <button id="removeTally">MINUS 1</button>
+      <button id="resetTally">NOCHMALS</button>
+    </div>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <div id="completeOverlay" class="overlay hidden">
+      <img src="images/header-image-white.png" alt="Header" class="overlay-header">
+      <button id="overlayCloseButton" class="overlay-close-button">
+        <img src="icons/close-icon.png" alt="Close">
+      </button>
+      <img src="images/txt.png" alt="Centered" class="overlay-centered">
+    </div>
+
+    <div class="preload-container">
+      <img src="images/tally-1.png" alt="Preload Tally 1">
+      <img src="images/tally-2.png" alt="Preload Tally 2">
+      <img src="images/tally-3.png" alt="Preload Tally 3">
+      <img src="images/tally-4.png" alt="Preload Tally 4">
+      <img src="images/tally-5.png" alt="Preload Tally 5">
+    </div>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js').then(registration => {
+            console.log('Service Worker registered! Scope:', registration.scope);
+          }).catch(err => {
+            console.log('Service Worker registration failed:', err);
+          });
+        });
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+body, html, .overlay {
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    /* min-height: 100vh; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    overflow-y: hidden;
+    background-color: #000;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-right: env(safe-area-inset-right);
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+button, button img {
+    width: 100%;
+    height: auto;
+    border: none;
+    background: none;
+    background-color: transparent;
+    padding: 0px;
+    cursor: pointer;
+}
+
+button, a, .touch-element {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+
+img {
+    -webkit-touch-callout: none; /* iOS Safari */
+}
+
+.preload-container {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.more-button {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  max-width: 24px;
+  max-height: 24px;
+}
+
+.more-options.hidden {
+  display: none;
+}
+
+.more-options button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    display: block;
+    width: 100%; 
+    text-align: left;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 14px;
+}
+
+.more-options {
+  position: fixed;
+  left: 28px;
+  bottom: 54px;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.content {
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+#tallyGroups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1130px;
+    margin: auto;
+}
+
+.tallyGroup {
+    width: calc(50% - 4px);
+    display: flex;
+    justify-content: center;
+}
+
+.tally {
+    max-width: 100%;
+    height: auto;
+}
+
+.addTally img {
+    align-self: flex-end;
+    width: 100%;
+    height: auto;
+}
+
+.addTally:active, .addTally:focus, .more-button:active, .more-button:focus {
+    background-color: transparent;
+    outline: none;
+}
+
+@media (min-width: 562px) {
+    .tally {
+        width: 47%;
+        margin: 1%;
+    }
+}
+
+#removeTally, #resetTally {
+    letter-spacing: 4px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*min-height: 100vh; */
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0px;
+    background-image: url('images/complete-image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: env(safe-area-inset-bottom);
+    z-index: 10;
+}
+
+.overlay-header {
+    align-self: flex-start;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: auto;
+}
+
+.overlay-centered {
+    width: 100%;
+    /* max-width: 80%; */
+    object-fit: contain;
+    margin: auto;
+}
+
+.overlay-close-button img {
+    align-self: flex-start;
+    width: 100%;
+    height: auto;
+}
+
+#completeOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
