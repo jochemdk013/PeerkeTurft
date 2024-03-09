@@ -1,6 +1,6 @@
 {
-  "short_name": "JohnnyTurft",
-  "name": "JohnnyTurft",
+  "short_name": "PeerkeTurft",
+  "name": "PeerkeTurft",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
@@ -13,9 +13,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/JohnnyTurft/",
+  "start_url": "/PeerkeTurft/",
   "background_color": "#000000",
   "display": "standalone",
-  "scope": "/JohnnyTurft/",
+  "scope": "/PeerkeTurft/",
   "theme_color": "#000000"
 }
